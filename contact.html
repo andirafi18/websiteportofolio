@@ -28,8 +28,13 @@
         <h2>Hubungi Saya</h2>
         <p>Punya pertanyaan atau tertarik untuk bekerja sama? Jangan ragu untuk mengirim pesan melalui formulir di bawah ini.</p>
 
-       <form name="contact" method="POST" data-netlify="true" class="contact-form">
-            
+       <form name="contact" method="POST" action="/thank-you/" data-netlify="true" class="contact-form">
+             <p style="display:none;">
+                 <label>
+        Jangan isi ini jika kamu manusia: <input name="bot-field" />
+                 </label>
+             </p>
+
             <div class="form-group">
                 <label for="name">Nama Anda</label>
                 <input type="text" id="name" name="user_name" required>
