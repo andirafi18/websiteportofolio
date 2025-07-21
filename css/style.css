@@ -1,365 +1,4 @@
-/* --- Reset Dasar & Gaya Global --- */
-body {
-    font-family: 'Arial', sans-serif;
-    color: var(--warna-teks); /* Menggunakan variabel */
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: var(--warna-latar); /* Menggunakan variabel */
-}
-
-.container {
-    width: 80%;
-    margin: auto; /* Trik untuk membuat container berada di tengah */
-    overflow: hidden; /* Praktik baik untuk menjaga layout */
-}
-
-/* --- Gaya untuk Header --- */
-header {
-    background: var(--warna-header-bg); /* Menggunakan variabel */
-    color: var(--warna-header-teks);    /* Menggunakan variabel */
-    padding: 20px 0;
-    border-bottom: var(--warna-utama) 3px solid; /* Menggunakan variabel */
-}
-/* Tambahkan di bawah gaya header a */
-header h1 {
-    float: left;
-    margin: 0;
-    color: var(--warna-header-teks); /* Tambahkan ini agar warnanya ikut variabel */
-}
-
-/* ... kode lain ... */
-
-header a {
-    color: var(--warna-header-teks); /* Menggunakan variabel */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-header a:hover, header .active a {
-    color: var(--warna-utama); /* Menggunakan variabel */
-}
-/* --- Gaya untuk Main Content (Hero Section) --- */
-main .hero {
-    padding: 80px 20px;
-    text-align: center;
-}
-
-main .hero h2 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-main .hero p {
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-
-.cta-button {
-    display: inline-block;
-    background: #0056b3;
-    color: #fff;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px; /* Memberi sudut melengkung pada tombol */
-    font-size: 18px;
-}
-
-/* --- Gaya untuk Footer --- */
-footer {
-    padding: 20px;
-    margin-top: 40px;
-    color: #fff;
-    background-color: #333;
-    text-align: center;
-}
-/* --- Gaya untuk Gambar di Mesin Tik Section --- */
-.hero img {
-    max-width: 100%; /* Membuat gambar tidak akan pernah lebih lebar dari containernya */
-    height: auto; /* Menjaga rasio aspek gambar agar tidak gepeng */
-    margin-top: 30px; /* Memberi jarak antara gambar dengan paragraf di atasnya */
-    margin-bottom: 30px; /* Memberi jarak antara gambar dengan tombol di bawahnya */
-}
-/* --- =============== --- */
-/* --- Gaya Halaman Portfolio --- */
-/* --- =============== --- */
-
-.portfolio-page h2 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.portfolio-page p {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto 40px auto;
-}
-
-.case-study-item {
-    background: var(--warna-kartu-bg); /* Menggunakan variabel */
-    margin-bottom: 30px;
-    display: flex;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px var(--warna-bayangan); /* Menggunakan variabel */
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-.case-study-item:hover {
-    transform: translateY(-5px); /* Sedikit terangkat saat di-hover */
-}
-
-.case-study-item img {
-    width: 300px; /* Lebar gambar tetap */
-    object-fit: cover; /* Memastikan gambar tidak gepeng dan mengisi area */
-}
-
-.case-study-content {
-    padding: 30px;
-}
-
-.case-study-content h3 {
-    margin-top: 0;
-    color: #0056b3;
-}
-
-/* Gaya untuk tag teknologi */
-.tech-stack {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-}
-
-.tech-stack li {
-    display: inline-block;
-    background: #e7f1ff;
-    color: #0056b3;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 14px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-
-/* Gaya untuk tombol disabled */
-.cta-button {
-    display: inline-block;
-    background: var(--warna-utama); /* Menggunakan variabel */
-    color: var(--warna-header-teks); /* Menggunakan variabel, karena sama-sama putih */
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
-}/* --- ======================= --- */
-/* --- Gaya Halaman Detail Proyek --- */
-/* --- ======================= --- */
-
-.project-detail h1 {
-    text-align: center;
-    font-size: 42px;
-    margin-top: 40px;
-    margin-bottom: 30px;
-}
-
-.project-banner {
-    width: 100%;
-    max-width: 900px; /* Batasi lebar gambar agar tidak terlalu besar */
-    display: block;
-    margin: 0 auto 40px auto;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.project-intro {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 40px;
-}
-
-.project-intro h4 {
-    margin: 0 0 5px 0;
-    color: #666;
-    font-size: 16px;
-}
-
-.project-intro p {
-    margin: 0;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.project-narrative h2 {
-    color: #0056b3;
-    border-bottom: 2px solid #e7f1ff;
-    padding-bottom: 10px;
-    margin-top: 40px;
-}
-
-/* Memberi gaya pada tag <code> */
-.project-narrative code {
-    background: #e7f1ff;
-    color: #333;
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-family: 'Courier New', Courier, monospace;
-}
-/* --- =================== --- */
-/* --- Gaya Halaman Kontak --- */
-/* --- =================== --- */
-
-.contact-page h2 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.contact-page p {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto 40px auto;
-}
-
-.contact-form {
-    max-width: 700px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #555;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    font-family: 'Arial', sans-serif;
-    box-sizing: border-box; /* Properti penting agar padding tidak merusak layout */
-}
-
-/* Memberi highlight saat input field aktif */
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: #0056b3;
-    outline: none; /* Menghilangkan outline default yang kurang bagus */
-    box-shadow: 0 0 5px rgba(0, 86, 179, 0.3);
-}
-
-/* Tombol Kirim akan otomatis menggunakan style .cta-button yang sudah kita buat */
-.contact-form .cta-button {
-    width: 100%;
-    border: none;
-    cursor: pointer;
-}
-/* --- Gaya Tombol Scroll to Top --- */
-.scroll-top-button {
-    position: fixed; /* Tetap di posisi yang sama saat di-scroll */
-    bottom: 30px;
-    right: 30px;
-    background-color: #0056b3;
-    color: white;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-    font-size: 24px;
-    border-radius: 50%; /* Membuatnya bulat */
-    text-decoration: none;
-    z-index: 1000; /* Memastikan tombol di atas elemen lain */
-    display: none; /* Sembunyikan secara default */
-    transition: opacity 0.3s, transform 0.3s;
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.scroll-top-button.show {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-}
-/* @media (kondisi) {
-    /* Aturan CSS yang berlaku jika kondisi terpenuhi */
-
-/* --- =================== --- */
-/* ---    MEDIA QUERIES    --- */
-/* --- =================== --- */
-
-/* Untuk Tablet dan di bawahnya (lebar maks 768px) */
-@media (max-width: 768px) {
-
-    /* --- Renovasi Header --- */
-    header {
-        padding-bottom: 20px;
-    }
-    
-    header .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-    
-    header h1,
-    header nav {
-        float: none;
-        text-align: center;
-        width: 100%;
-    }
-
-    header nav {
-        margin-top: 0;
-    }
-    
-    header nav ul li {
-        display: block;
-        padding: 10px 0;
-    }
-
-    /* --- Renovasi Halaman Portofolio --- */
-    .case-study-item {
-        flex-direction: column; /* Ubah arah flex dari baris menjadi kolom */
-    }
-
-    .case-study-item img {
-        width: 100%;
-        max-height: 250px;
-    }
-
-    /* --- Renovasi Halaman Detail Proyek --- */
-    .project-intro {
-        flex-direction: column; /* Tumpuk ke bawah juga */
-        gap: 20px; /* Beri jarak antar item */
-    }
-
-    .project-detail h1,
-    .contact-page h2 {
-        font-size: 32px; /* Perkecil ukuran judul di HP */
-    }
-
-    /* --- Renovasi Halaman Kontak --- */
-    .contact-form {
-        padding: 20px; /* Kurangi padding form di layar kecil */
-    }
-
-}
-/* ===== PALET WARNA & TEMA ===== */
+/* ===== PALET WARNA & TEMA (HARUS DI PALING ATAS) ===== */
 :root {
   /* Tema Terang (Default) */
   --warna-latar: #f4f4f4;
@@ -381,6 +20,64 @@ body.dark-mode {
   --warna-utama: #0099ff;
   --warna-bayangan: rgba(255, 255, 255, 0.05);
 }
+
+/* --- Reset Dasar & Gaya Global --- */
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--warna-teks);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--warna-latar);
+    transition: background-color 0.3s, color 0.3s; /* Transisi halus untuk dark mode */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* --- Gaya untuk Header --- */
+header {
+    background: var(--warna-header-bg);
+    color: var(--warna-header-teks);
+    padding: 20px 0;
+    border-bottom: var(--warna-utama) 3px solid;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    color: var(--warna-header-teks);
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+header a {
+    color: var(--warna-header-teks);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header a:hover, header .active a {
+    color: var(--warna-utama);
+}
+
 /* --- Gaya Tombol Dark Mode --- */
 .theme-switcher {
     background: none;
@@ -391,11 +88,301 @@ body.dark-mode {
     border-radius: 50%;
     cursor: pointer;
     font-size: 20px;
-    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .theme-switcher:hover {
     background-color: var(--warna-header-teks);
     color: var(--warna-header-bg);
+}
+
+
+/* --- Gaya Umum --- */
+.cta-button {
+    display: inline-block;
+    background: var(--warna-utama);
+    color: var(--warna-header-teks);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background: #007bff; /* Sedikit lebih terang saat di-hover */
+}
+
+
+/* --- Gaya Halaman Utama (Hero Section) --- */
+main .hero {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+main .hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: var(--warna-teks);
+}
+
+main .hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+/* --- Gaya Halaman Portfolio --- */
+.portfolio-page h2, .contact-page h2, .project-detail h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: var(--warna-teks);
+}
+
+.portfolio-page p, .contact-page p {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+.case-study-item {
+    background: var(--warna-kartu-bg);
+    margin-bottom: 30px;
+    display: flex;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--warna-bayangan);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case-study-item:hover {
+    transform: translateY(-5px);
+}
+
+.case-study-item img {
+    width: 300px;
+    object-fit: cover;
+}
+
+.case-study-content {
+    padding: 30px;
+}
+
+.case-study-content h3 {
+    margin-top: 0;
+    color: var(--warna-utama);
+}
+
+.tech-stack {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.tech-stack li {
+    display: inline-block;
+    background: #e7f1ff;
+    color: #0056b3;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* --- Gaya Halaman Detail Proyek --- */
+.project-banner {
+    width: 100%;
+    max-width: 900px;
+    display: block;
+    margin: 0 auto 40px auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px var(--warna-bayangan);
+}
+
+.project-intro {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background: var(--warna-kartu-bg);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.project-intro h4 {
+    margin: 0 0 5px 0;
+    color: #666; /* Warna sekunder bisa dibuatkan variabel jika perlu */
+    font-size: 16px;
+}
+
+.project-intro p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.project-narrative h2 {
+    color: var(--warna-utama);
+    border-bottom: 2px solid #e7f1ff;
+    padding-bottom: 10px;
+    margin-top: 40px;
+}
+
+.project-narrative code {
+    background: #e7f1ff;
+    color: var(--warna-teks);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* --- Gaya Halaman Kontak --- */
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--warna-kartu-bg);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--warna-bayangan);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--warna-teks);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+    background-color: var(--warna-latar);
+    color: var(--warna-teks);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--warna-utama);
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.3);
+}
+
+.contact-form .cta-button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* --- Gaya Komponen Lain --- */
+.scroll-top-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--warna-utama);
+    color: var(--warna-header-teks);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    border-radius: 50%;
+    text-decoration: none;
+    z-index: 1000;
+    display: none;
+    transition: opacity 0.3s, transform 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.scroll-top-button.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer {
+    padding: 20px;
+    margin-top: 40px;
+    color: var(--warna-header-teks);
+    background-color: var(--warna-header-bg);
+    text-align: center;
+}
+
+
+/* --- =================== --- */
+/* ---    MEDIA QUERIES    --- */
+/* --- (HARUS DI PALING BAWAH) --- */
+/* --- =================== --- */
+
+/* Untuk Tablet dan di bawahnya (lebar maks 768px) */
+@media (max-width: 768px) {
+
+    .container {
+        width: 90%;
+    }
+
+    /* --- Renovasi Header --- */
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header nav ul {
+        text-align: center;
+    }
+
+    header nav ul li {
+        display: block;
+        padding: 8px 0;
+        margin-left: 0;
+    }
+
+    /* --- Renovasi Halaman --- */
+    main .hero h2, .portfolio-page h2, .contact-page h2, .project-detail h1 {
+        font-size: 32px;
+    }
+
+    .case-study-item {
+        flex-direction: column;
+    }
+
+    .case-study-item img {
+        width: 100%;
+        max-height: 220px;
+    }
+
+    .project-intro {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
 }
