@@ -1,11 +1,11 @@
 /* --- Reset Dasar & Gaya Global --- */
 body {
     font-family: 'Arial', sans-serif;
-    color: #333;
+    color: var(--warna-teks); /* Menggunakan variabel */
     line-height: 1.6;
-    margin: 0; /* Menghilangkan margin default dari browser */
-    padding: 0; /* Menghilangkan padding default dari browser */
-    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    background-color: var(--warna-latar); /* Menggunakan variabel */
 }
 
 .container {
@@ -16,41 +16,29 @@ body {
 
 /* --- Gaya untuk Header --- */
 header {
-    background: #333;
-    color: #fff;
+    background: var(--warna-header-bg); /* Menggunakan variabel */
+    color: var(--warna-header-teks);    /* Menggunakan variabel */
     padding: 20px 0;
-    border-bottom: #0056b3 3px solid;
+    border-bottom: var(--warna-utama) 3px solid; /* Menggunakan variabel */
 }
 /* Tambahkan di bawah gaya header a */
-header a:hover, header .active a {
-    color: #0099ff; /* Warna berubah saat di-hover atau saat halamannya aktif */
-}
 header h1 {
-    float: left; /* Membuat Logo di kiri */
+    float: left;
     margin: 0;
+    color: var(--warna-header-teks); /* Tambahkan ini agar warnanya ikut variabel */
 }
 
-header nav {
-    float: right; /* Membuat Navigasi di kanan */
-    margin-top: 10px;
-}
-
-header ul {
-    margin: 0;
-    padding: 0;
-}
-
-header li {
-    display: inline; /* Membuat menu menjadi horizontal */
-    padding: 0 20px;
-}
+/* ... kode lain ... */
 
 header a {
-    color: #fff;
-    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    color: var(--warna-header-teks); /* Menggunakan variabel */
+    text-decoration: none;
     font-weight: bold;
 }
 
+header a:hover, header .active a {
+    color: var(--warna-utama); /* Menggunakan variabel */
+}
 /* --- Gaya untuk Main Content (Hero Section) --- */
 main .hero {
     padding: 80px 20px;
@@ -109,15 +97,14 @@ footer {
 }
 
 .case-study-item {
-    background: #fff;
+    background: var(--warna-kartu-bg); /* Menggunakan variabel */
     margin-bottom: 30px;
-    display: flex; /* Mengaktifkan Flexbox untuk layout! */
+    display: flex;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Memberi efek bayangan halus */
-    overflow: hidden; /* Memastikan sudut gambar mengikuti border-radius */
-    transition: transform 0.3s ease; /* Animasi halus saat di-hover */
+    box-shadow: 0 4px 10px var(--warna-bayangan); /* Menggunakan variabel */
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
-
 .case-study-item:hover {
     transform: translateY(-5px); /* Sedikit terangkat saat di-hover */
 }
@@ -155,17 +142,15 @@ footer {
 }
 
 /* Gaya untuk tombol disabled */
-.cta-button-disabled {
+.cta-button {
     display: inline-block;
-    background: #ccc;
-    color: #666;
+    background: var(--warna-utama); /* Menggunakan variabel */
+    color: var(--warna-header-teks); /* Menggunakan variabel, karena sama-sama putih */
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 5px;
     font-size: 18px;
-    cursor: not-allowed;
-}
-/* --- ======================= --- */
+}/* --- ======================= --- */
 /* --- Gaya Halaman Detail Proyek --- */
 /* --- ======================= --- */
 
@@ -367,4 +352,26 @@ footer {
         padding: 20px; /* Kurangi padding form di layar kecil */
     }
 
+}
+/* ===== PALET WARNA & TEMA ===== */
+:root {
+  /* Tema Terang (Default) */
+  --warna-latar: #f4f4f4;
+  --warna-teks: #333;
+  --warna-kartu-bg: #ffffff;
+  --warna-header-bg: #333333;
+  --warna-header-teks: #ffffff;
+  --warna-utama: #0056b3;
+  --warna-bayangan: rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode {
+  /* Variabel ini akan aktif jika body punya class "dark-mode" */
+  --warna-latar: #121212;
+  --warna-teks: #e0e0e0;
+  --warna-kartu-bg: #1e1e1e;
+  --warna-header-bg: #1e1e1e;
+  --warna-header-teks: #e0e0e0;
+  --warna-utama: #0099ff;
+  --warna-bayangan: rgba(255, 255, 255, 0.05);
 }
