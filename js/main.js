@@ -65,3 +65,27 @@ function toggleTheme() {
 
 // 4. Pasang "pendengar" event pada tombol
 themeSwitcherButton.addEventListener("click", toggleTheme);
+// --- LOGIKA UNTUK ANIMASI SCROLL-REVEAL ---
+
+// 1. Pilih semua elemen yang ingin dianimasikan
+const elementsToReveal = document.querySelectorAll(".reveal");
+
+// 2. Buat "mata-mata" (Intersection Observer)
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    // Jika elemen masuk ke dalam layar (isIntersecting)
+    if (entry.isIntersecting) {
+      // Tambahkan kelas 'visible' untuk memicu animasi
+      entry.target.classList.add("visible");
+      // (Opsional) Berhenti mengamati elemen ini setelah terlihat
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.1 // Picu animasi saat 10% elemen terlihat
+});
+
+// 3. Suruh "mata-mata" untuk mengamati setiap elemen
+elementsToReveal.forEach((element) => {
+  observer.observe(element);
+});
