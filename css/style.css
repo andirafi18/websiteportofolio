@@ -297,7 +297,6 @@ footer {
 /* @media (kondisi) {
     /* Aturan CSS yang berlaku jika kondisi terpenuhi */
 
-
 /* --- =================== --- */
 /* ---    MEDIA QUERIES    --- */
 /* --- =================== --- */
@@ -306,6 +305,17 @@ footer {
 @media (max-width: 768px) {
 
     /* --- Renovasi Header --- */
+    header {
+        padding-bottom: 20px;
+    }
+    
+    header .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
     header h1,
     header nav {
         float: none;
@@ -313,12 +323,8 @@ footer {
         width: 100%;
     }
 
-    header {
-        padding-bottom: 10px;
-    }
-
     header nav {
-        margin-top: 15px;
+        margin-top: 0;
     }
     
     header nav ul li {
@@ -326,17 +332,17 @@ footer {
         padding: 10px 0;
     }
 
-    /* --- [BARU] Renovasi Halaman Portofolio --- */
+    /* --- Renovasi Halaman Portofolio --- */
     .case-study-item {
         flex-direction: column; /* Ubah arah flex dari baris menjadi kolom */
     }
 
     .case-study-item img {
-        width: 100%; /* Lebar gambar penuhi container */
-        max-height: 250px; /* Batasi tinggi gambar agar tidak terlalu besar */
+        width: 100%;
+        max-height: 250px;
     }
 
-    /* --- [BARU] Renovasi Halaman Detail Proyek --- */
+    /* --- Renovasi Halaman Detail Proyek --- */
     .project-intro {
         flex-direction: column; /* Tumpuk ke bawah juga */
         gap: 20px; /* Beri jarak antar item */
@@ -347,7 +353,7 @@ footer {
         font-size: 32px; /* Perkecil ukuran judul di HP */
     }
 
-    /* --- [BARU] Renovasi Halaman Kontak --- */
+    /* --- Renovasi Halaman Kontak --- */
     .contact-form {
         padding: 20px; /* Kurangi padding form di layar kecil */
     }
