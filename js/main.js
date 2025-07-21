@@ -89,3 +89,44 @@ const observer = new IntersectionObserver((entries) => {
 elementsToReveal.forEach((element) => {
   observer.observe(element);
 });
+// --- LOGIKA UNTUK VALIDASI FORM KONTAK ---
+
+// 1. Pilih elemen form dan input yang dibutuhkan
+const contactForm = document.querySelector(".contact-form");
+const nameInput = document.querySelector("#name");
+const emailInput = document.querySelector("#email");
+const messageInput = document.querySelector("#message");
+
+// 2. Pasang "pendengar" saat form akan di-submit
+if (contactForm) {
+    contactForm.addEventListener("submit", function(event) {
+        // Hentikan pengiriman form untuk sementara
+        event.preventDefault();
+        
+        // Validasi semua input
+        let isNameValid = validateRequired(nameInput, "Nama tidak boleh kosong.");
+        let isEmailValid = validateRequired(emailInput, "Email tidak boleh kosong.");
+        let isMessageValid = validateRequired(messageInput, "Pesan tidak boleh kosong.");
+
+        // Jika semua input valid, kirim form
+        if (isNameValid && isEmailValid && isMessageValid) {
+            contactForm.submit();
+        }
+    });
+}
+
+// 3. Fungsi pembantu untuk validasi
+function validateRequired(input, errorMessage) {
+    const errorDiv = input.nextElementSibling; // Pilih div.error-message
+    if (input.value.trim() === "") {
+        // Jika input kosong
+        errorDiv.textContent = errorMessage;
+        input.classList.add("error");
+        return false;
+    } else {
+        // Jika input terisi
+        errorDiv.textContent = "";
+        input.classList.remove("error");
+        return true;
+    }
+}

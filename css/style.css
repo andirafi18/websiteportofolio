@@ -344,6 +344,18 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+/* --- Gaya untuk Validasi Form --- */
+.error-message {
+    color: #d9534f; /* Warna merah untuk error */
+    font-size: 14px;
+    margin-top: 5px;
+    min-height: 1em; /* Beri ruang agar layout tidak "loncat" */
+}
+
+.form-group input.error,
+.form-group textarea.error {
+    border-color: #d9534f; /* Border merah pada input yang salah */
+}
 
 /* --- =================== --- */
 /* ---    MEDIA QUERIES    --- */
