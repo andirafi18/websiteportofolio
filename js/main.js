@@ -27,3 +27,41 @@ function scrollToTop(e) {
 // 4. Pasang "pendengar" event pada window dan tombol
 window.addEventListener("scroll", handleScroll); // Jalankan handleScroll setiap kali user scroll
 scrollTopButton.addEventListener("click", scrollToTop); // Jalankan scrollToTop saat tombol diklik
+
+// --- LOGIKA UNTUK DARK/LIGHT MODE ---
+
+// 1. Pilih elemen yang dibutuhkan
+const themeSwitcherButton = document.querySelector("#theme-switcher");
+const body = document.body;
+
+// 2. Cek tema yang tersimpan di localStorage saat halaman dimuat
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) {
+    body.classList.add(savedTheme);
+    // Ganti ikon jika tema tersimpan adalah gelap
+    if (savedTheme === "dark-mode") {
+        themeSwitcherButton.innerHTML = "☀️";
+    }
+}
+
+// 3. Buat fungsi untuk mengubah tema
+function toggleTheme() {
+    // Jika body sudah punya class 'dark-mode', hapus. Jika belum, tambahkan.
+    body.classList.toggle("dark-mode");
+
+    // Logika untuk menyimpan pilihan & mengubah ikon
+    if (body.classList.contains("dark-mode")) {
+        // Simpan pilihan ke localStorage
+        localStorage.setItem("theme", "dark-mode");
+        // Ubah ikon menjadi matahari
+        themeSwitcherButton.innerHTML = "☀️";
+    } else {
+        // Hapus pilihan dari localStorage
+        localStorage.removeItem("theme");
+        // Ubah ikon menjadi bulan
+        themeSwitcherButton.innerHTML = "🌙";
+    }
+}
+
+// 4. Pasang "pendengar" event pada tombol
+themeSwitcherButton.addEventListener("click", toggleTheme);
